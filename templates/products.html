@@ -1,0 +1,30 @@
+<h2>Products</h2>
+
+<a class="btn btn-default" ui-sref="products.new">New</a>
+
+<div class="row">
+  <div class="col-xs-6">
+
+    <table class="table table-hover table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="prod in pc.list">
+          <td>
+            <a ui-sref="products.detail({id: prod.id})">{{prod.name}}</a>
+          </td>
+          <td>{{prod.price}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="col-xs-6">
+    <aside ui-view>Click on a product to preview</aside>
+  </div>
+</div>

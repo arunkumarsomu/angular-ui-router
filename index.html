@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="store">
+  <head>
+    <meta charset="utf-8">
+    <title>UI Router</title>
+
+    <!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+    -->
+
+    <script src="vendor/angular.min.js"></script>
+    <script src="vendor/angular-ui-router.min.js"></script>
+
+    <link rel="stylesheet" href="vendor/bootstrap.min.css" media="screen" title="no title">
+
+    <script src="js/main.js"></script>
+    <script src="js/controllers/dashboard.js"></script>
+    <script src="js/controllers/product-list.js"></script>
+    <script src="js/controllers/product-detail.js"></script>
+    <script src="js/controllers/new-product.js"></script>
+    <script src="js/services/products.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Store</h1>
+
+      <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+          <li><a ui-sref="dashboard" ui-sref-active="active">Dashboard</a></li>
+          <li><a ui-sref="products" ui-sref-active="active">All Products</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- <main ng-controller="DashboardController as dash">
+      {{dash.greeting}}
+    </main> -->
+
+    <main ui-view></main>
+  </body>
+</html>
